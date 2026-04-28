@@ -2,6 +2,8 @@
 
 Automated end-to-end registration and delivery system for multi-date webinar events. Built for [Live Life With Zest](https://www.livelifewithzest.com), a health coaching brand based in New York.
 
+The pipeline was deployed across three separate webinar series — Menopause, Burnout, and Weight Loss — each running the same architecture independently.
+
 ---
 
 ## Overview
@@ -71,7 +73,8 @@ This architecture reduces that to a single point of truth: one email template, o
 
 ## Key Results
 
-- 8 webinar dates automated under a single email template
+- 3 webinar series automated (Menopause, Burnout, Weight Loss) using the same architecture
+- 8 webinar dates per series, all running under a single email template
 - Zero manual sends — fully triggered by registration
 - Each attendee receives credentials specific to their registered date
 - Copy changes deploy in under 30 seconds (edit one block)
@@ -81,11 +84,15 @@ This architecture reduces that to a single point of truth: one email template, o
 
 ## Planned Extensions
 
-- Pre-event reminder workflow (GoHighLevel)
-  - Trigger: 24 hours before event date
-  - Trigger: 1 hour before event date
-  - Same branch logic, same `zoom_access_details` field
-  - Same convergence pattern — single reminder email template
+### Pre-Event Reminder Workflow
+
+The same workflow architecture will be reused for automated reminders, with the following adaptations:
+
+- Same If/Else branch logic and `zoom_access_details` field
+- A **Wait** block is added inside each branch, configured to the exact date and time of that webinar
+- Two reminder triggers per date: 24 hours before and 1 hour before the event
+- All branches converge to a single reminder email template via Go To
+- No new architecture required — only the Wait timing and email copy change
 
 ---
 
@@ -99,8 +106,3 @@ This architecture reduces that to a single point of truth: one email template, o
 ## Status
 
 Production — fully tested and live.
-```
-
----
-
-Cole isso no modo **"Code"**, depois clique em **"Preview"** para conferir antes de salvar.
