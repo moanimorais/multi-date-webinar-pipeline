@@ -1,6 +1,6 @@
 # Multi-Date Webinar Delivery Pipeline
 
-Automated end-to-end registration and delivery system for multi-date webinar events. Built for [Live Life With Zest](https://www.livelifewithzest.com), a health coaching brand based in New York.
+Automated end-to-end registration and delivery system for multi-date webinar events. Built for [Live Life With Zest](https://www.livelifewithzest.com/the-zest-collective) — coaching platform also available at [heal.me/madelaine](https://heal.me/madelaine), a health coaching brand based in New York.
 
 The pipeline was deployed across three separate webinar series — Menopause, Burnout, and Weight Loss — each running the same architecture independently.
 
