@@ -98,7 +98,7 @@ The same workflow architecture will be reused for automated reminders, with the 
 
 ## Documentation
 
-- [Implementation Report](./docs/implementation-report.pdf) — Technical architecture, logic breakdown, and execution steps
+- [Implementation Report](./docs/Implementation%20Report.pdf) — Technical architecture, logic breakdown, and execution steps
 - [Team Guide](./docs/Team%20Guide.pdf) — Step-by-step guide for updating workflows when adding new event dates
 
 ---
